@@ -1,5 +1,6 @@
 '''
 SELECT * from COMPANY;
+-- drop table COMPANY -- danger!
 Select * from COMPANY where id =1;
 select id, name from COMPANY
   where id > 2;
@@ -13,8 +14,16 @@ update COMPANY set age=21 where id=5;
 delete from COMPANY where address like 'Rich-Mond%';
 
  targil
- select all rows where the salary is above avg
  update all the rows -> set the salary to be 10% bigger
+   solution:
+   update COMPANY set salary = SALARY * 1.1;
+ delete workers at the age of 25
+   solution:
+   DELETE from COMPANY where age=25;
+ *etgar: select all rows where the salary is above avg
+   solution:
+   select * from COMPANY where SALARY > (select avg(salary) from COMPANY)
  *etgar: select all the rows sorted by the salary from high to low
- create a class in python for company use the init with the fields, __init__, __str__, __repr__
+   solution:
+   select * from COMPANY order by salary desc
 '''
