@@ -16,4 +16,5 @@ delete from COMPANY where address like 'Rich-Mond%';
  select all rows where the salary is above avg
  update all the rows -> set the salary to be 10% bigger
  *etgar: select all the rows sorted by the salary from high to low
+ create a class in python for company use the init with the fields, __init__, __str__, __repr__
 '''
