@@ -15,7 +15,7 @@ class Employee:
         return str(self.__dict__)
 
 # connect
-conn = sqlite3.connect('C:\itay\sqlite\mydb2.db')
+conn = sqlite3.connect('mydb2.db')
 print("connection to db opened")
 
 # select
