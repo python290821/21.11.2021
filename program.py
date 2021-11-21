@@ -20,13 +20,16 @@ print("connection to db opened")
 
 # select
 cursor = conn.execute("SELECT * FROM COMPANY")
-# cols = [desc[0] for desc in cursor.description]
-# print(cols)
+cols = {desc[1][0]:desc[0] for desc in enumerate(cursor.description)}
+print(cols) # nice
 
 # run on select result and put rows in list
-_emp = []
+_emp = dict()
 for row in cursor:
-    e = Employee(row[0], row[1], row[2], row[3], row[4])
-    _emp.append(e)
+    e = Employee(row[cols['ID']], row[cols['NAME']],
+                 row[cols['AGE']], row[cols['ADDRESS']],
+                 row[cols['SALARY']])
+    _emp[row[cols['ID']]] = e
 print(_emp)
+print(_emp[3]) # print by id
 
