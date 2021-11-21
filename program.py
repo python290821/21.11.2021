@@ -11,4 +11,9 @@ select count(*) from COMPANY;
 select avg(salary) from COMPANY
 update COMPANY set age=21 where id=5;
 delete from COMPANY where address like 'Rich-Mond%';
+
+ targil
+ select all rows where the salary is above avg
+ update all the rows -> set the salary to be 10% bigger
+ *etgar: select all the rows sorted by the salary from high to low
 '''
